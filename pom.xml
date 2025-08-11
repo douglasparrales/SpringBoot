@@ -11,8 +11,8 @@
 	<groupId>com.x</groupId>
 	<artifactId>SpringBoot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Curso de Spring Boot</name>
-	<description>Curso de Spring Boot. GDE</description>
+	<name>Spring Boot</name>
+	<description>Spring Boot. GDE</description>
 	<url/>
 	<licenses>
 		<license/>
