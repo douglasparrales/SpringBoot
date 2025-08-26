@@ -1,4 +1,4 @@
-# Imagenes de demostracion de las clases java:
+# Resultados de los controllers:
 ## pathVariable:
 ![pathVariable](../../../resources/static/pathVariable.png)
 
