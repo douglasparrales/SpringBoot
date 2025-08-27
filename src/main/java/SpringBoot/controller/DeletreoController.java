@@ -1,5 +1,6 @@
 package SpringBoot.controller;
 
+import SpringBoot.domain.Deletreo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,17 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DeletreoController {
 
+    //ANTES DE SABER ANOTACIONES DE SPRING, CON JAVA PURO:
+    private Deletreo msj = new Deletreo();//mala práctica
+
     /**
      * Endpoint para deletrear una palabra
+     *
      * @param word la palabra a deletrar
      * @return array de cada letra de la palabra
      */
     @GetMapping({"/deletrear/{word}", "/deletreo/{word}"})
-    public String[] Deletreo(@PathVariable String word){
-        String[] letras = new String[word.length()];
-        for (int i = 0; i < word.length(); i++) {
-            letras[i] = String.valueOf(word.charAt(i));
-        }
-        return letras;
+    public String[] deletreo(@PathVariable String word) {
+        return msj.deletreo(word);
     }
 }
