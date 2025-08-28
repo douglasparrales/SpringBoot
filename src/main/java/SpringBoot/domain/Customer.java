@@ -3,7 +3,7 @@ package SpringBoot.domain;
 /**
  * CLASS TYPE POJO
  */
-public class Customers {
+public class Customer {
 
     /**
      * ATTRIBUTES CUSTOMERS
@@ -20,7 +20,7 @@ public class Customers {
      * @param username username customer
      * @param password password customer
      */
-    public Customers(int id, String name, String username, String password){
+    public Customer(int id, String name, String username, String password){
         this.id = id;
         this.name = name;
         this.username = username;
