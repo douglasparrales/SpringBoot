@@ -1,9 +1,7 @@
 package SpringBoot.controller;
 
 import SpringBoot.domain.Customer;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -47,5 +45,16 @@ public class CustomerController {
             }
         }
         return null;//bad practice
+    }
+
+    /**
+     * ENDPOINT POST CUSTOMER
+     * @param customer customer
+     * @return customer JSON
+     */
+    @PostMapping("/customers")
+    public Customer postCustomer(@RequestBody Customer customer){
+        customers.add(customer);
+        return customer;
     }
 }

@@ -11,3 +11,6 @@ se ha añadido la anotacion de @pathvariable, que hace que las varibales dinamic
 # Cuarto paso: 
 se ha utilizado la arquitectura de capas, y enfocado en microservicios.
 Se ha creado la primera api. haciendo un GET.
+
+# 5
+I have added annotaction @PostMapping, and @BodyRequest succesfully! at CustomerController//
