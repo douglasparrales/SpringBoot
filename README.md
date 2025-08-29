@@ -13,4 +13,6 @@ se ha utilizado la arquitectura de capas, y enfocado en microservicios.
 Se ha creado la primera api. haciendo un GET.
 
 # 5
-I have added annotaction @PostMapping, and @BodyRequest succesfully! at CustomerController//
+I have added annotation @PostMapping, and @RequestBody successfully! at CustomerController//
+# 6
+I have added annotation putMapping and RequestBody successfully! at CustomerController //
