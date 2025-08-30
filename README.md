@@ -15,4 +15,6 @@ Se ha creado la primera api. haciendo un GET.
 # 5
 I have added annotation @PostMapping, and @RequestBody successfully! at CustomerController//
 # 6
-I have added annotation putMapping and RequestBody successfully! at CustomerController //
+I have added annotation PutMapping and RequestBody successfully! at CustomerController //
+# 7
+The annotation DeleteMapping has been added at CustomerController successfully! //

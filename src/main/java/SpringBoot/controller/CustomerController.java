@@ -75,4 +75,22 @@ public class CustomerController {
         }
         return null;//bad practice
     }
+
+    /**
+     * ENDPOINT FOR TO REMOVE CUSTOMERS
+     * @param id CUSTOMER FOR TO REMOVE
+     * @return CUSTOMER REMOVED.
+     */
+    @DeleteMapping("/customers/{id}")
+    public Customer deleteCustomer(@PathVariable int id){
+        for (Customer c : customers){
+            if (c.getId() == id){
+                customers.remove(c);
+                System.out.println("Customer has been removed successfully!");
+
+                return c;
+            }
+        }
+        return null; //bad practice
+    }
 }
