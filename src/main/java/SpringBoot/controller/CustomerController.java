@@ -11,6 +11,7 @@ import java.util.List;
  * Class Controller Customer
  */
 @RestController
+@RequestMapping("/customers")
 public class CustomerController {
 
     /**
@@ -27,7 +28,8 @@ public class CustomerController {
      * Endpoint Customer
      * @return customers List<>
      */
-    @GetMapping("/customers")
+    //@RequestMapping(method = RequestMethod.GET)
+    @GetMapping
     public List<Customer> getCustomers(){
         return customers;
     }
@@ -37,7 +39,8 @@ public class CustomerController {
      * @param username PARAM FOR FIND
      * @return USERNAME FROM CUSTOMERS
      */
-    @GetMapping("/customers/{username}")
+    // @RequestMapping(value = ("/{username}"), method = RequestMethod.GET)
+    @GetMapping("/{username}")
     public Customer getCustomer(@PathVariable String username){
         for (Customer c : customers){
             if (c.getUsername().equalsIgnoreCase(username)){
@@ -52,7 +55,8 @@ public class CustomerController {
      * @param customer customer
      * @return customer JSON
      */
-    @PostMapping("/customers")
+    // @RequestMapping(method = RequestMethod.POST)
+    @PostMapping
     public Customer postCustomer(@RequestBody Customer customer){
         customers.add(customer);
         return customer;
@@ -63,7 +67,8 @@ public class CustomerController {
      * @param customer CUSTOMER FOR MODIFY
      * @return CUSTOMER JSON
      */
-    @PutMapping("/customers")
+    //@RequestMapping(method = RequestMethod.PUT)
+    @PutMapping
     public Customer putCustomer(@RequestBody Customer customer){
         for (Customer c : customers){
             if (c.getId() == customer.getId()){
@@ -81,7 +86,8 @@ public class CustomerController {
      * @param id CUSTOMER FOR TO REMOVE
      * @return CUSTOMER REMOVED.
      */
-    @DeleteMapping("/customers/{id}")
+    //@RequestMapping(value = ("/{id}"), method = RequestMethod.DELETE)
+    @DeleteMapping("/{id}")
     public Customer deleteCustomer(@PathVariable int id){
         for (Customer c : customers){
             if (c.getId() == id){
@@ -99,7 +105,8 @@ public class CustomerController {
      * @param customer CUSTOMER WITH THE PARAM
      * @return CUSTOMER JSON
      */
-    @PatchMapping({"/customer", "/customers"})
+    //@RequestMapping(method = RequestMethod.PATCH)
+    @PatchMapping
     public Customer patchCustomer(@RequestBody Customer customer){
         for (Customer c : customers){
             if (c.getId() == customer.getId()){

@@ -16,3 +16,4 @@ I have added annotation PutMapping and RequestBody successfully! at CustomerCont
 The annotation DeleteMapping has been added at CustomerController successfully! //
 # 8
 the annotation patchMapping has been added at CustomerController successfully!! //
+the annotation RequestMapping has been added at Class Customer //
