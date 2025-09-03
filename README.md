@@ -17,3 +17,5 @@ The annotation DeleteMapping has been added at CustomerController successfully! 
 # 8
 the annotation patchMapping has been added at CustomerController successfully!! //
 the annotation RequestMapping has been added at Class Customer //
+# 9
+the class ResponseEntity has been added at CustomerController successfully! //
