@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -63,6 +64,7 @@ public class CustomerController {
     @PostMapping
     public ResponseEntity<?> postCustomer(@RequestBody Customer customer){
         customers.add(customer);
+
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body("The customer has been CREATED with id: " + customer.getId());
     }
@@ -73,19 +75,18 @@ public class CustomerController {
      * @return CUSTOMER JSON
      */
     //@RequestMapping(method = RequestMethod.PUT)
-    @PutMapping
+    @PutMapping //MUST GENERATE CODE 204.
     public ResponseEntity<?> putCustomer(@RequestBody Customer customer){
         for (Customer c : customers){
             if (c.getId() == customer.getId()){
                 c.setName(customer.getName());
                 c.setUsername(customer.getUsername());
                 c.setPassword(customer.getPassword());
-                return ResponseEntity.status(HttpStatus.OK)
-                        .body("The customer has been MODIFY with id: " + customer.getId());
+
+                return ResponseEntity.noContent().build();
             }
         }
-        return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body("The customer has not been found with id: " + customer.getId());
+        return ResponseEntity.notFound().build();
     }
 
     /**
@@ -94,18 +95,17 @@ public class CustomerController {
      * @return CUSTOMER REMOVED.
      */
     //@RequestMapping(value = ("/{id}"), method = RequestMethod.DELETE)
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id}") //MUST GENERATE CODE 204.
     public ResponseEntity<?> deleteCustomer(@PathVariable int id){
         for (Customer c : customers){
             if (c.getId() == id){
                 customers.remove(c);
                 System.out.println("Customer has been removed successfully!");
 
-                return ResponseEntity.status(HttpStatus.OK)
-                        .body("The customer has been removed successfully with id: " + id);
+                return ResponseEntity.noContent().build();
             }
         }
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The customer has not been FOUND with id: " + id);
+        return ResponseEntity.notFound().build();
     }
 
     /**
