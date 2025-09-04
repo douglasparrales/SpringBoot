@@ -19,3 +19,5 @@ the annotation patchMapping has been added at CustomerController successfully!! 
 the annotation RequestMapping has been added at Class Customer //
 # 9
 the class ResponseEntity has been added at CustomerController successfully! //
+# 10
+URI has been created in POST endpoint, and PUT and DELETE has been simplifying. //
