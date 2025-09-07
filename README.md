@@ -21,3 +21,5 @@ the annotation RequestMapping has been added at Class Customer //
 the class ResponseEntity has been added at CustomerController successfully! //
 # 10
 URI has been created in POST endpoint, and PUT and DELETE has been simplifying. //
+# 11
+Service Layer has been created with Products successfully! 
