@@ -22,4 +22,6 @@ the class ResponseEntity has been added at CustomerController successfully! //
 # 10
 URI has been created in POST endpoint, and PUT and DELETE has been simplifying. //
 # 11
-Service Layer has been created with Products successfully! 
+Service Layer has been created with Products successfully!
+# 12
+Product Service (Interface)  has been added successfully //
