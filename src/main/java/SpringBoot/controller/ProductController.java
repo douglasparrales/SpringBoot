@@ -17,7 +17,7 @@ public class ProductController {
 
     //instance´s class
     @Autowired
-    ProductService productsService;
+    private ProductService productsService;
 
     @GetMapping
     public ResponseEntity<?> getProducts(){
