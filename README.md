@@ -27,3 +27,5 @@ Service Layer has been created with Products successfully!
 Product Service (Interface)  has been added successfully //
 # 13
 the annotation autowired has been added successfully//
+# 14
+the annotation @Primary has been added successfully and also the library jackson has been added.//

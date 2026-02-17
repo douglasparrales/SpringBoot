@@ -9,6 +9,11 @@ public class Product {
     private Double price;
     private Integer stock;
 
+    //constructor empty
+    public Product (){
+
+    }
+
     //constructor
     public Product(Integer id, String name, Double price, Integer stock) {
         this.id = id;

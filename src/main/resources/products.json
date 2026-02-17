@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "SSD 1T",
+    "price": 59.99,
+    "stock": 5
+  },
+  {
+    "id": 2,
+    "name": "RTX 5900",
+    "price": 499.99,
+    "stock": 8
+  },
+  {
+    "id": 3,
+    "name": "64GB RAM",
+    "price": 59.99,
+    "stock": 16
+  },
+  {
+    "id": 4,
+    "name": "FORD EXPEDITION 2025",
+    "price": 12.999,
+    "stock": 3
+  }
+]
