@@ -2,15 +2,21 @@ package SpringBoot.service;
 
 import SpringBoot.domain.Product;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@Lazy
 @Service
 @ConditionalOnProperty(name = "service.products", havingValue = "list")
 public class ProductsServiceImpl implements ProductService {
+
+    public ProductsServiceImpl(){
+        System.out.println("Instance of class ProductsServiceImpl");
+    }
 
     List<Product> products = new ArrayList<>(Arrays.asList(
             new Product(1, "laptop", 799.99, 5),

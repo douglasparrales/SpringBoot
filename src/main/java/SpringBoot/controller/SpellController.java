@@ -2,6 +2,7 @@ package SpringBoot.controller;
 
 import SpringBoot.service.SpellService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,7 @@ public class SpellController {
 
     //I know the annotation service and autowired now:
     @Autowired
+    @Lazy
     private SpellService spellService;
 
     /**
