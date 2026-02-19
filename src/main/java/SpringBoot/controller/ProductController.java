@@ -18,7 +18,6 @@ public class ProductController {
 
     //injection of dependencies
     @Autowired
-    @Qualifier("listResourceService")
     private ProductService productsService;
 
     @GetMapping
